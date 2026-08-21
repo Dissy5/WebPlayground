@@ -10,7 +10,7 @@ a {
 }
 
 hr {
-  border-color: rgb(83, 97, 124);
+  border-color: rgb(94, 100, 112);
   margin: 1rem 0rem;
 }
 
@@ -32,14 +32,16 @@ tbody tr:nth-child(odd) {
   background-color: rgb(34, 39, 43);
 }
 
-nav a {
-  padding: 0px 3em;
-  border-right: 1px solid rgb(88, 89, 95);
-}
-
 #main-header {
   background-color: #575757;
   padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#main-header img {
+  height: 3rem;
+  margin-right: 1rem;
 }
 
 #main-nav ul {
@@ -56,6 +58,8 @@ nav a {
   text-decoration: none;
   display: block;
   padding: 1rem;
+  border-right: 1px solid rgb(97, 97, 97);
+  font-weight: 600;
 }
 
 #main-nav li a:hover {
