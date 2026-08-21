@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>Links</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Hyperlinks</h2>
+      <p>
+        The &lt;a&gt; tag defines a hyperlink. Using the href attribute we can
+        assign the link's destination
+      </p>
+      <a href="https://example.com">Example Link</a>
+
+      <hr />
+
+      <h2>Target Attribute</h2>
+      <p>The title attribute determines where the link is opened</p>
+      <p>Target value can be:</p>
+      <ul>
+        <li>
+          _self - Opens in same window/tab
+          <br />
+          <a href="https://example.com" target="_self">Example</a>
+        </li>
+        <li>
+          _blank - Opens in new window or tab
+          <br />
+          <a href="https://example.com" target="_blank">Example</a>
+        </li>
+        <li>
+          _parent - Opens in the parent frame
+          <br />
+          <a href="https://example.com" target="_parent">Example</a>
+        </li>
+        <li>
+          _top - Opens in the full body of the window
+          <br />
+          <a href="https://example.com" target="_top">Example</a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h2>Absolute vs. Relative URLs</h2>
+      <h3>Absolute</h3>
+      <p>Contains the full web address. Example: https://www.example.com</p>
+      <h3>Relative</h3>
+      <p>
+        Contains a LOCAL link - Same website. Example: /lessons/html/links.html
+      </p>
+
+      <hr />
+
+      <h2>Image as a Link</h2>
+      <p>To use an image, put the img element inside the anchor element.</p>
+      <a href="https://example.com"><img src="/images/pepehands.png" /></a>
+
+      <hr />
+
+      <h2>Link to Email</h2>
+      <p>
+        Within the href attribute, we can use "mailto:" to make the link open
+        the user's email program to send a new email
+      </p>
+      <p>
+        Example: &lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
+        <br />
+        => <a href="mailto:someone@example.com">Send Email</a>
+      </p>
+
+      <hr />
+
+      <h2>Button as a Link</h2>
+      <p>
+        Buttons are a bit different. We have to use Javascript to make a button
+        redirect on click.
+      </p>
+      <p>We do this using the onclick attribute.</p>
+      <p>
+        Example: &lt;button
+        onclick="document.location='https://example.com'"&gt;Button
+        Link&lt;/button&gt;
+      </p>
+      <button onclick="document.location = 'https://example.com'">
+        Button Link
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>HTML Lists</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <p>
+        In HTML, lists are used to group related items together. There are three
+        main types of lists:
+      </p>
+      <ul>
+        <li>Ordered Lists</li>
+        <li>Unordered Lists</li>
+        <li>Description Lists</li>
+      </ul>
+
+      <hr />
+
+      <h2>Ordered Lists</h2>
+      <p>
+        An ordered list is a list of items that are numbered. Each item in the
+        list is preceded by a number or letter.
+      </p>
+
+      <div class="code-example">
+        <pre><code class="code-snippet" data-source="ordered-list-example"></code></pre>
+
+        <img src="/images/down-arrow.png" />
+
+        <div id="ordered-list-example">
+          <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ol>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Unordered Lists</h2>
+      <p>
+        An unordered list is a list of items that are bulleted. Each item in the
+        list is preceded by a bullet point.
+      </p>
+
+      <div class="code-example">
+        <pre><code class="code-snippet" data-source="unordered-list-example"></code></pre>
+        <img src="/images/down-arrow.png" />
+        <div id="unordered-list-example">
+          <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>List Style Type</h3>
+      <p>
+        We can change the list item marker using the
+        <code>list-style-type</code> property in CSS.
+      </p>
+
+      <ul>
+        <li style="list-style-type: disc">Disc</li>
+        <li style="list-style-type: circle">Circle</li>
+        <li style="list-style-type: square">Square</li>
+        <li style="list-style-type: none">None</li>
+      </ul>
+
+      <h3>Nested Lists</h3>
+
+      <p>We can nest lists by placing one list inside another list item.</p>
+      <div class="code-example">
+        <pre><code class="code-snippet" data-source="nested-list-example"></code></pre>
+        <img src="/images/down-arrow.png" />
+        <div id="nested-list-example">
+          <ul>
+            <li>
+              First item
+              <ul>
+                <li>Nested first item</li>
+                <li>Nested second item</li>
+              </ul>
+            </li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Description Lists</h2>
+      <p>
+        A description list is a list of terms and their descriptions. Each term
+        is followed by a description.
+      </p>
+
+      <div class="code-example">
+        <pre><code class="code-snippet" data-source="description-list-example"></code></pre>
+        <img src="/images/down-arrow.png" />
+        <div id="description-list-example">
+          <dl>
+            <dt>HTML</dt>
+            <dd>- HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>- Cascading Style Sheets</dd>
+            <dt>JS</dt>
+            <dd>- JavaScript</dd>
+          </dl>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Horizontal Lists</h2>
+      <p>
+        We can display list items horizontally by using the
+        <code>display: flex</code> property in CSS.
+      </p>
+      <div class="code-example">
+        <pre><code class="code-snippet" data-source="horizontal-list-example"></code></pre>
+        <img src="/images/down-arrow.png" />
+        <div id="horizontal-list-example" style="padding: 0px">
+          <style>
+            .horizontal-list {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              background-color: #641439;
+            }
+
+            .horizontal-list li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 16px;
+              text-decoration: none;
+            }
+
+            .horizontal-list li a:hover {
+              color: black;
+              background-color: #eb96a8;
+            }
+          </style>
+
+          <ul class="horizontal-list">
+            <li><a href="#">First item</a></li>
+            <li><a href="#">Second item</a></li>
+            <li><a href="#">Third item</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

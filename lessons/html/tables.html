@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tables</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>HTML Tables</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>Table Structure</h2>
+      <p>
+        The &lt;table&gt; tag defines a table. A table is made up of rows and
+        columns. Each row is defined by the &lt;tr&gt; tag, and each column is
+        defined by the &lt;td&gt; tag. Header cells are defined by the
+        &lt;th&gt; tag. The &lt;thead&gt; and &lt;tbody&gt; tags can be used to
+        group header and body rows, respectively.
+      </p>
+
+      <h3>Example Table</h3>
+
+      <pre class="code-snippet" data-source="example-table-basic"></pre>
+
+      <div id="example-table-basic">
+        <table>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1, Column 1</td>
+              <td>Row 1, Column 2</td>
+            </tr>
+            <tr>
+              <td>Row 2, Column 1</td>
+              <td>Row 2, Column 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr />
+
+      <h2>Table Caption</h2>
+      <p>
+        The &lt;caption&gt; tag is used to add a caption to a table. It should
+        be placed immediately after the &lt;table&gt; tag.
+      </p>
+
+      <table>
+        <caption>
+          Example Table Caption
+        </caption>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        As seen above, the caption is displayed at the top of the table. And, it
+        is centered.
+      </p>
+
+      <hr />
+
+      <h2>Colgroups</h2>
+
+      <p>
+        The &lt;colgroup&gt; element is used to group columns in a table and
+        apply styles or attributes to them collectively.
+      </p>
+      <p>
+        Each group of columns is defined using the &lt;col&gt; element within
+        the &lt;colgroup&gt;.
+      </p>
+      <p>
+        The span attribute of the &lt;col&gt; element specifies the number of
+        columns the &lt;col&gt; element should span. If we don't provide a span
+        attribute, it defaults to 1.
+      </p>
+
+      <h3>Example</h3>
+      <pre class="code-snippet" data-source="example-colgroup"></pre>
+
+      <div id="example-colgroup">
+      <table>
+        <colgroup>
+          <col span="2" style="background-color: #aa1f49" />
+          <col style="background-color: #275c66" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
+
+      <hr />
+
+      <h2>Colspan & Rowspan</h2>
+      <p>
+        The colspan attribute of the &lt;th&gt; or &lt;td&gt; element specifies
+        the number of columns the cell should span.
+      </p>
+
+      <h3>Colspan</h3>
+      <pre class="code-snippet" data-source="example-colspan"></pre>
+      </pre>
+
+      <div id="example-colspan">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Header 1</th>
+            <th>Header 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+            <td>Row 1, Column 3</td>
+          </tr>
+          <tr>
+            <td>Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+            <td>Row 2, Column 3</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Rowspan</h3>
+      <p>
+        The rowspan attribute of the &lt;th&gt; or &lt;td&gt; element specifies
+        the number of rows the cell should span.
+      </p>
+      <pre class="code-snippet" data-source="example-rowspan"></pre>
+
+      <div id="example-rowspan">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Header 1</th>
+            <th>Header 2</th>
+          </tr>
+          <tr>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+          </tr>
+          <tr>
+            <td>Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+body {
+  background-color: #2b2b2b;
+  color: rgb(252, 252, 252);
+  font-family: Helvetica;
+  margin: 0px;
+}
+
+a {
+  color: rgb(168, 235, 255);
+}
+
+hr {
+  border-color: rgb(83, 97, 124);
+  margin: 1rem 0rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid rgb(88, 89, 95);
+  padding: 15px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(26, 31, 37);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(34, 39, 43);
+}
+
+nav a {
+  padding: 0px 3em;
+  border-right: 1px solid rgb(88, 89, 95);
+}
+
+#main-header {
+  background-color: #575757;
+  padding: 0.5rem 2rem;
+}
+
+#main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #a0a0a0;
+}
+
+#main-nav li a {
+  text-align: center;
+  color: rgb(26, 31, 37);
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+}
+
+#main-nav li a:hover {
+  background-color: #747474;
+  color: rgb(252, 252, 252);
+}
+
+#content {
+  width: 60%;
+  margin-inline: auto;
+  background-color: #424242;
+  padding: 1rem;
+}
+
+#lesson-nav-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ref-table {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.code-example pre,
+.code-example div {
+  background-color: rgb(48, 50, 53);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+}
+
+.code-example img {
+  margin: 0.5rem 0rem;
+}

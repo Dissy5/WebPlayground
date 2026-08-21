@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>Quotations and Citations</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <h2>Block Quotes</h2>
+        <p>We can create blockquotes using the &lt;blockquote&gt; tag.</p>
+        <blockquote cite="https://example.com">
+          This is a block quote. Notice that it automatically indents itself.
+          Behind the scenes, we've included a "cite" attribute for this element.
+        </blockquote>
+
+        <hr />
+
+        <h2>Short Quotes</h2>
+        <p>
+          We can create short quotations using the &lt;q&gt; tag. Browsers
+          normally insert quotations around it.
+        </p>
+        <q>Wow wow wow test quotation!</q>
+
+        <hr />
+
+        <h2>Abbreviations</h2>
+        <p>The &lt;abbr&gt; tag defines an abbreviation.</p>
+        <abbr title="Laugh Out Loud">LOL</abbr>
+        <p>
+          Some browsers may underline the abbreviation. In the example above,
+          we've used the title attribute to provide the full abbreviation when
+          moused over.
+        </p>
+
+        <hr />
+
+        <h2>Address</h2>
+        <p>
+          The &lt;address&gt; tag defines contact info. Browsers will always add
+          a line break before and after an address element.
+        </p>
+        <address>
+          Written by Sam Thomas <br />
+          Visit us at: <br />
+          Example.com <br />
+          Box 123, Apple <br />
+          USA
+        </address>
+
+        <hr />
+
+        <h2>Cite Element</h2>
+        <p>
+          The &lt;cite&gt; tag defines the title of a creative work. (NOT a
+          person's name)
+        </p>
+        <cite>Web Dev Notebook</cite>
+        <p>The cite element usually renders in italic.</p>
+
+        <hr />
+
+        <h2>Bi-Directional Override</h2>
+        <p>The &lt;bdo&gt; tag overrides the text direction</p>
+        <bdo dir="rtl">This text is written right to left.</bdo>
+        <p>We use the attribute 'dir' to declare the direction of the text.</p>
+      </div>
+    </div>
+  </body>
+</html>
