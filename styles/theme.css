@@ -95,6 +95,12 @@ button:hover {
   padding: 1rem;
 }
 
+@media (max-width: 768px) {
+  #content {
+    width: 100%;
+  }
+}
+
 #lesson-nav-button-container {
   display: flex;
   justify-content: space-between;
