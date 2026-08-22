@@ -97,7 +97,10 @@ button:hover {
 
 @media (max-width: 768px) {
   #content {
-    width: 100%;
+    width: auto;
+  }
+  #main-nav ul {
+    flex-direction: column;
   }
 }
 
