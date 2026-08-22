@@ -10,23 +10,27 @@
   </head>
   <body>
     <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
       <h1>Web Playground</h1>
     </header>
     <nav id="main-nav">
       <ul>
-        <li>
-          <a href="/index.html">Home</a>
-        </li>
-        <li>
-          <a href="/lessons/lesson-index.html">Lessons</a>
-        </li>
-        <li>
-          <a href="/references/html/elements.html">Elements Reference</a>
-        </li>
-        <li>
-          <a href="/references/html/attributes.html">Attributes Reference</a>
-        </li>
-      </ul>
+  <li>
+    <a href="/index.html">Home</a>
+  </li>
+  <li>
+    <a href="/lessons/lesson-index.html">Lessons</a>
+  </li>
+  <li>
+    <a href="/references/html/elements.html">Elements Reference</a>
+  </li>
+  <li>
+    <a href="/references/html/attributes.html">Attributes Reference</a>
+  </li>
+  <li>
+    <a href="/unorganized-notes.html">Unorganized Notes</a>
+  </li>
+</ul>
     </nav>
 
     <div id="content">
@@ -42,44 +46,39 @@
 
       <h2>Image Tag</h2>
       <p>
-        The &lt;img&gt; tag is used to display images on a webpage. It is an
-        empty tag, meaning it does not have a closing tag.
+        The &lt;img&gt; tag is used to display images on a webpage. It is an empty tag, meaning it does not have a
+        closing tag.
       </p>
 
       <h3>Attributes</h3>
       <ul>
         <li><strong>src</strong>: Specifies the path to the image file</li>
-        <li>
-          <strong>alt</strong>: Provides alternative text for the image if it
-          cannot be displayed
-        </li>
+        <li><strong>alt</strong>: Provides alternative text for the image if it cannot be displayed</li>
         <li><strong>width</strong>: Specifies the width of the image</li>
         <li><strong>height</strong>: Specifies the height of the image</li>
       </ul>
 
-      <p>
-        NOTE: If we use the width and height HTML attributes, we omit the 'px'
-        unit. However, in CSS, you must include the 'px' unit.
+      <p class="note">
+        NOTE: If we use the width and height HTML attributes, we omit the 'px' unit. However, in CSS, you must include
+        the 'px' unit.
       </p>
 
       <hr />
 
       <h2>Image Maps</h2>
       <p>
-        Image maps allow you to define clickable areas within an image. You can
-        use the &lt;map&gt; and &lt;area&gt; tags to create image maps.
+        Image maps allow you to define clickable areas within an image. You can use the &lt;map&gt; and &lt;area&gt;
+        tags to create image maps.
       </p>
 
       <h3>Example</h3>
       <p>
-        &lt;img src="example.jpg" usemap="#example-map" alt="Example Image"
-        /&gt;<br />
+        &lt;img src="example.jpg" usemap="#example-map" alt="Example Image" /&gt;<br />
         <br />
         &lt;map name="example-map"&gt;<br />
-        &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350"
-        href="https://example.com" alt="Example Link" /&gt;<br />
-        &nbsp;&nbsp;&lt;area shape="circle" coords="337,300,44"
-        href="https://another-example.com" alt="Another Example Link" /&gt;<br />
+        &nbsp;&nbsp;&lt;area shape="rect" coords="34,44,270,350" href="https://example.com" alt="Example Link" /&gt;<br />
+        &nbsp;&nbsp;&lt;area shape="circle" coords="337,300,44" href="https://another-example.com" alt="Another Example
+        Link" /&gt;<br />
         &lt;/map&gt;
       </p>
 
@@ -88,26 +87,20 @@
       <h2>Picture Element</h2>
 
       <p>
-        The &lt;picture&gt; element allows you to define multiple sources for an
-        image, enabling responsive images based on different screen sizes or
-        resolutions.
+        The &lt;picture&gt; element allows you to define multiple sources for an image, enabling responsive images based
+        on different screen sizes or resolutions.
       </p>
 
       <h3>Example</h3>
       <p>
         &lt;picture&gt;<br />
-        &nbsp;&nbsp;&lt;source media="(min-width: 650px)" srcset="large.jpg"
-        /&gt;<br />
-        &nbsp;&nbsp;&lt;source media="(min-width: 465px)" srcset="medium.jpg"
-        /&gt;<br />
+        &nbsp;&nbsp;&lt;source media="(min-width: 650px)" srcset="large.jpg" /&gt;<br />
+        &nbsp;&nbsp;&lt;source media="(min-width: 465px)" srcset="medium.jpg" /&gt;<br />
         &nbsp;&nbsp;&lt;img src="small.jpg" alt="Example Image" /&gt;<br />
         &lt;/picture&gt;
       </p>
 
-      <p>
-        NOTE: Always specify the img element as the last child element of the
-        picture element.
-      </p>
+      <p class="note">NOTE: Always specify the img element as the last child element of the picture element.</p>
     </div>
   </body>
 </html>

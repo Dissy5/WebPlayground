@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>JavaScript Basics</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <h2>Introduction</h2>
+        <p>JavaScript is a programming language that allows us to manipulate the content of a web page.</p>
+
+        <p>
+          The most basic example of a JavaScript method is the
+          <code>getElementById()</code>
+          method.
+        </p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example-getelementbyid"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="example-getelementbyid">
+            <p id="hello">I can change this text to whatever I want!</p>
+
+            <script>
+              document.getElementById("hello").innerHTML = "Hello, world!";
+            </script>
+          </div>
+        </div>
+
+        <p>
+          In the example above, the paragraph text is actually different initially, but the script after it changes the
+          text to "Hello, world!".
+        </p>
+
+        <p>
+          Let's try executing some JavaScript code with a button.
+          <br />
+          We can do this by using the <code>onclick</code> attribute.
+        </p>
+
+        <p>
+          NOTE: The <code>onclick</code> attribute is a global attribute, so it can be used on any HTML element, not
+          just buttons.
+        </p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example-button"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="example-button">
+            <button id="button" onclick="alert('Button clicked!')">Click me!</button>
+          </div>
+        </div>
+
+        <hr />
+
+        <h2>Altering HTML Attributes</h2>
+
+        <p>We can also alter the attributes of an HTML element using JavaScript.</p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example-alter-attribute"></code></pre>
+          <img src="/images/down-arrow.png" />
+
+          <div id="example-alter-attribute">
+            <ol id="alter-attribute-list">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+
+            <button onclick="document.getElementById('alter-attribute-list').type = '1'">Decimal</button>
+            <button onclick="document.getElementById('alter-attribute-list').type = 'a'">Alphabetical</button>
+            <button onclick="document.getElementById('alter-attribute-list').type = 'i'">Roman Numerals</button>
+          </div>
+        </div>
+
+        <hr />
+
+        <h2>Altering CSS Styles</h2>
+
+        <p>We can also alter the CSS styles of an HTML element using JavaScript.</p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example-alter-style"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="example-alter-style">
+            <p id="alter-style">Click the button to change the background color of the page.</p>
+
+            <button onclick="document.body.style.backgroundColor = 'rgb(39, 82, 138)'">Blue</button>
+
+            <button onclick="document.body.style.backgroundColor = '#701919'">Red</button>
+          </div>
+        </div>
+
+        <p class="note">
+          NOTE: In the above example, we use rgb values for blue, and a hex value for red. There are many different ways
+          to declare a color value in CSS.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

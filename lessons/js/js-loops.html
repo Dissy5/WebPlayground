@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Loops</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>JavaScript Loops</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <h2>for Loop</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="for-loop-example"></code></pre>
+
+          <script id="for-loop-example">
+            for (expression1; expression2; expression3) {
+              // code to execute
+            }
+          </script>
+        </div>
+
+        <p>The for loop is used to execute a block of code a certain number of times.</p>
+
+        <ul>
+          <li>expression1 is executed (one time) before the execution of the code block.</li>
+          <li>expression2 is executed before each iteration of the code block.</li>
+          <li>expression3 is executed after each iteration of the code block.</li>
+        </ul>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="for-loop-example2"></code></pre>
+          <img src="/images/down-arrow.png" alt="Down Arrow" id="for-loop-example2-arrow" />
+          <div id="for-loop-example2">
+            <script>
+              let outputString = "";
+
+              for (let i = 0; i < 10; i++) {
+                outputString += i + " ";
+              }
+            </script>
+
+            <button onclick="alert(outputString)">Show Output</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

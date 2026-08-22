@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Conditionals</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>JavaScript Conditionals</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <h2>If Else Statement</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="conditional-example"></code></pre>
+
+          <script id="conditional-example">
+            if (condition1) {
+              // code to execute if condition1 is true
+            } else if (condition2) {
+              // code to execute if condition2 is true
+            } else {
+              // code to execute if condition1 and condition2 are false
+            }
+          </script>
+        </div>
+
+        <hr />
+
+        <h2>Switch Statement</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="switch-example"></code></pre>
+
+          <script id="switch-example">
+            switch (expression) {
+              case value1:
+                // code to execute if expression is value1
+                break;
+              case value2:
+                // code to execute if expression is value2
+                break;
+              default:
+              // code to execute if expression is not value1 or value2
+            }
+          </script>
+        </div>
+
+        <p class="note">
+          NOTE: The default case is optional. No break statement is needed for the last case in the switch statement.
+        </p>
+
+        <hr />
+
+        <h2>Ternary Operator</h2>
+
+        <p>The ternary operator is a shorthand way to write an if else statement.</p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="ternary-example"></code></pre>
+
+          <script id="ternary-example">
+            condition ? expression1 : expression2;
+          </script>
+        </div>
+
+        <hr />
+
+        <h2>Examples</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example1"></code></pre>
+
+          <img src="/images/down-arrow.png" alt="Down Arrow" id="example1-arrow" />
+          <div id="example1">
+            <p>X = <span id="example1-x"></span></p>
+            <p>X &gt; 0 = <span id="example1-result"></span></p>
+
+            <button onclick="incrementX()">Increment X</button>
+            <button onclick="decrementX()">Decrement X</button>
+            <button onclick="resetX()">Reset X</button>
+
+            <script>
+              let x = 1;
+
+              function updateExample1() {
+                document.getElementById("example1-x").innerHTML = x;
+                let exampleResult = document.getElementById("example1-result");
+                x > 0 ? (exampleResult.innerHTML = "TRUE") : (exampleResult.innerHTML = "FALSE");
+              }
+
+              function incrementX() {
+                x++;
+                updateExample1();
+              }
+
+              function decrementX() {
+                x--;
+                updateExample1();
+              }
+
+              function resetX() {
+                x = 1;
+                updateExample1();
+              }
+
+              updateExample1();
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+  <li>
+    <a href="/index.html">Home</a>
+  </li>
+  <li>
+    <a href="/lessons/lesson-index.html">Lessons</a>
+  </li>
+  <li>
+    <a href="/references/html/elements.html">Elements Reference</a>
+  </li>
+  <li>
+    <a href="/references/html/attributes.html">Attributes Reference</a>
+  </li>
+  <li>
+    <a href="/unorganized-notes.html">Unorganized Notes</a>
+  </li>
+</ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>JavaScript Syntax</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <h2>JavaScript Comments</h2>
+        <p>Comments are used to explain the code and make it more readable.</p>
+        <p>Comments are created in JavaScript using the <code>//</code> syntax.</p>
+        <p>To create a multi-line comment, use the <code>/*</code> and <code>*/</code> syntax.</p>
+
+        <hr />
+
+        <h2>JavaScript Variables</h2>
+
+        <p>Variables are declared with the <code>let</code> or <code>const</code> keywords.</p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="example-variables"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="example-variables">
+            <script>
+              let x = 5;
+              const y = 10;
+            </script>
+
+            <p id="variable-example">Selected Variable: <span id="selected-variable">None</span></p>
+
+            <button onclick="document.getElementById('selected-variable').innerHTML = x">Select x</button>
+            <button onclick="document.getElementById('selected-variable').innerHTML = y">Select y</button>
+          </div>
+        </div>
+
+        <p class="note">NOTE: A <code>const</code> variable MUST be assigned a value when it is declared.</p>
+
+        <p class="note">
+          NOTE: A variable name CANNOT contain hyphens, as in JavaScript they are reserved for subtraction. For example,
+          <code>let variable-name = 10;</code> is invalid, but <code>let variableName = 10;</code> is valid.
+        </p>
+
+        <hr />
+
+        <h2>JavaScript Keywords</h2>
+
+        <p>
+          Keywords are reserved words that are used to declare variables, functions, and other elements in JavaScript.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>let</td>
+              <td>Declares a variable</td>
+            </tr>
+            <tr>
+              <td>const</td>
+              <td>Declares a constant</td>
+            </tr>
+            <tr>
+              <td>var</td>
+              <td>Declares a variable (NOT RECOMMENDED FOR MODERN JS)</td>
+            </tr>
+            <tr>
+              <td>function</td>
+              <td>Declares a function</td>
+            </tr>
+            <tr>
+              <td>return</td>
+              <td>Returns a value from a function</td>
+            </tr>
+            <tr>
+              <td>if</td>
+              <td>Checks if a condition is true</td>
+            </tr>
+            <tr>
+              <td>else</td>
+              <td>Executes code if the condition is false</td>
+            </tr>
+            <tr>
+              <td>while</td>
+              <td>Executes code while a condition is true</td>
+            </tr>
+            <tr>
+              <td>for</td>
+              <td>Executes code a specified number of times</td>
+            </tr>
+            <tr>
+              <td>break</td>
+              <td>Exits a loop</td>
+            </tr>
+            <tr>
+              <td>continue</td>
+              <td>Skips to the next iteration of a loop</td>
+            </tr>
+            <tr>
+              <td>try</td>
+              <td>Executes code that may throw an error</td>
+            </tr>
+            <tr>
+              <td>catch</td>
+              <td>Executes code if an error is thrown</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note">NOTE: There are many more keywords in JavaScript, but these are the most commonly used.</p>
+      </div>
+    </div>
+  </body>
+</html>

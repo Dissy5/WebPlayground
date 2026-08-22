@@ -6,34 +6,52 @@
     <title>Element Name</title>
     <link rel="stylesheet" href="/styles/theme.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
   </head>
   <body>
     <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
       <h1>Web Playground</h1>
     </header>
     <nav id="main-nav">
       <ul>
-        <li>
-          <a href="/index.html">Home</a>
-        </li>
-        <li>
-          <a href="/lessons/lesson-index.html">Lessons</a>
-        </li>
-        <li>
-          <a href="/references/html/elements.html">Elements Reference</a>
-        </li>
-        <li>
-          <a href="/references/html/attributes.html">Attributes Reference</a>
-        </li>
-      </ul>
+  <li>
+    <a href="/index.html">Home</a>
+  </li>
+  <li>
+    <a href="/lessons/lesson-index.html">Lessons</a>
+  </li>
+  <li>
+    <a href="/references/html/elements.html">Elements Reference</a>
+  </li>
+  <li>
+    <a href="/references/html/attributes.html">Attributes Reference</a>
+  </li>
+  <li>
+    <a href="/unorganized-notes.html">Unorganized Notes</a>
+  </li>
+</ul>
     </nav>
 
     <div id="content">
       <div id="element-reference-header">
-        <h1>Element Name</h1>
+        <h1>&lt;Element Name&gt;</h1>
       </div>
       <hr />
-      <div id="element-reference-content"></div>
+      <div id="element-reference-content">
+        <h2>Description</h2>
+        <p>Tag description</p>
+
+        <h2>Example</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="element-example"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="element-example">Element example</div>
+        </div>
+
+        <h2>Attributes</h2>
+      </div>
     </div>
   </body>
 </html>
