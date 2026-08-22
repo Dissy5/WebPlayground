@@ -39,8 +39,9 @@ tbody tr:nth-child(odd) {
 
 code {
   font-family: jetbrains-mono, monospace;
-  background-color: transparent;
+  background-color: rgb(51, 51, 51);
   color: rgb(174, 241, 247);
+  padding: 0 0.25em;
 }
 
 button {
@@ -114,6 +115,7 @@ button:hover {
   position: fixed;
   top: 10%;
   left: 50%;
+  transform: translateX(-50%);
   background-color: rgb(50, 139, 212);
   padding: 1rem;
   border-radius: 0.5rem;
