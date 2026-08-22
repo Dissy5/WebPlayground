@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #2b2b2b;
   color: rgb(252, 252, 252);
   font-family: Helvetica;
-  margin: 0px;
+  margin: 0;
+  padding-bottom: 5rem;
 }
 
 a {
@@ -45,6 +50,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: rgb(201, 201, 201);
 }
 
 #main-header {
@@ -94,6 +100,22 @@ button:hover {
   justify-content: space-between;
 }
 
+#return-to-top {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  background-color: rgb(50, 139, 212);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: rgb(252, 252, 252);
+  text-decoration: none;
+}
+
+#return-to-top:hover {
+  background-color: rgb(43, 111, 161);
+}
+
 .ref-table {
   width: 100%;
   margin-inline: auto;
@@ -128,4 +150,40 @@ button:hover {
 .note {
   background-color: rgb(46, 51, 102);
   padding: 1rem;
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1em;
+  height: 1em;
+
+  background-color: rgb(73, 212, 73);
+  color: white;
+  border-radius: 0.15em;
+
+  padding: 0.25rem;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.xmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1em;
+  height: 1em;
+
+  background-color: rgb(194, 53, 84);
+  color: white;
+  border-radius: 0.15em;
+
+  padding: 0.25rem;
+
+  font-size: 1.25rem;
+  font-weight: 600;
 }

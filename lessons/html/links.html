@@ -11,26 +11,26 @@
   <body>
     <header id="main-header">
       <img src="/images/logo-med.png" alt="Web Playground Logo" />
-<h1>Web Playground</h1>
+      <h1>Web Playground</h1>
     </header>
     <nav id="main-nav">
       <ul>
-  <li>
-    <a href="/index.html">Home</a>
-  </li>
-  <li>
-    <a href="/lessons/lesson-index.html">Lessons</a>
-  </li>
-  <li>
-    <a href="/references/html/elements.html">Elements Reference</a>
-  </li>
-  <li>
-    <a href="/references/html/attributes.html">Attributes Reference</a>
-  </li>
-  <li>
-    <a href="/unorganized-notes.html">Unorganized Notes</a>
-  </li>
-</ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+      </ul>
     </nav>
 
     <div id="content">
@@ -44,11 +44,8 @@
 
       <hr />
 
-      <h2>Hyperlinks</h2>
-      <p>
-        The &lt;a&gt; tag defines a hyperlink. Using the href attribute we can
-        assign the link's destination
-      </p>
+      <h2 id="section1">Hyperlinks</h2>
+      <p>The &lt;a&gt; tag defines a hyperlink. Using the href attribute we can assign the link's destination</p>
       <a href="https://example.com">Example Link</a>
 
       <hr />
@@ -85,9 +82,7 @@
       <h3>Absolute</h3>
       <p>Contains the full web address. Example: https://www.example.com</p>
       <h3>Relative</h3>
-      <p>
-        Contains a LOCAL link - Same website. Example: /lessons/html/links.html
-      </p>
+      <p>Contains a LOCAL link - Same website. Example: /lessons/html/links.html</p>
 
       <hr />
 
@@ -99,8 +94,8 @@
 
       <h2>Link to Email</h2>
       <p>
-        Within the href attribute, we can use "mailto:" to make the link open
-        the user's email program to send a new email
+        Within the href attribute, we can use "mailto:" to make the link open the user's email program to send a new
+        email
       </p>
       <p>
         Example: &lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
@@ -111,19 +106,36 @@
       <hr />
 
       <h2>Button as a Link</h2>
-      <p>
-        Buttons are a bit different. We have to use Javascript to make a button
-        redirect on click.
-      </p>
+      <p>Buttons are a bit different. We have to use Javascript to make a button redirect on click.</p>
       <p>We do this using the onclick attribute.</p>
+      <p>Example: &lt;button onclick="document.location='https://example.com'"&gt;Button Link&lt;/button&gt;</p>
+      <button onclick="document.location = 'https://example.com'">Button Link</button>
+
+      <hr />
+
+      <h2>Link to Download a File</h2>
+      <p>We can use the download attribute to specify the filename of the file to be downloaded.</p>
+      <p>Example: &lt;a href="file.pdf" download="file.pdf"&gt;Download File&lt;/a&gt;</p>
+      <a href="/images/pepehands.png" download>Download File</a>
+
+      <p class="note">Note: The download attribute is a boolean attribute. It does not need a value.</p>
+
+      <hr />
+
+      <h2>Link to a Specific Part of the Same Page</h2>
+      <p>We can use the href attribute to link to a specific part of the same page.</p>
       <p>
-        Example: &lt;button
-        onclick="document.location='https://example.com'"&gt;Button
-        Link&lt;/button&gt;
+        The way we link to a specific part of the same page is by using the id attribute of the element we want to link
+        to.
       </p>
-      <button onclick="document.location = 'https://example.com'">
-        Button Link
-      </button>
+      <p>Example: &lt;a href="#section1"&gt;Section 1&lt;/a&gt;</p>
+      <a href="#section1">Link to Section 1</a>
+
+      <p class="note">
+        Note: One cool thing we can do is use CSS to make this redirect happen smoothly. In CSS, we can use the selector
+        <code>html</code> to target the HTML element and use the <code>scroll-behavior</code> property to make the
+        scroll happen smoothly.
+      </p>
     </div>
   </body>
 </html>
