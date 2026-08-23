@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <div id="spacer"></div>
+    <nav id="main-nav">
+      <ul>
+  <li>
+    <a href="/index.html">Home</a>
+  </li>
+  <li>
+    <a href="/lessons/lesson-index.html">Lessons</a>
+  </li>
+  <li>
+    <a href="/projects/project-index.html">Projects</a>
+  </li>
+  <li>
+    <a href="/references/html/elements.html">Elements Reference</a>
+  </li>
+  <li>
+    <a href="/references/html/attributes.html">Attributes Reference</a>
+  </li>
+  <li>
+    <a href="/unorganized-notes.html">Unorganized Notes</a>
+  </li>
+</ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>Forms</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <p>A form is a way for us to collect user input.</p>
+
+        <hr />
+
+        <h2>&lt;form&gt;</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="form-example"></code></pre>
+          <div id="form-example">
+            <form>
+              <input />
+            </form>
+          </div>
+        </div>
+
+        <p>
+          The <code>&lt;form&gt;</code> element is mostly a semantic container
+          for anything where the user is submitting data.
+        </p>
+
+        <hr />
+
+        <h2>&lt;input&gt;</h2>
+
+        <p>
+          The <code>&lt;input&gt;</code> element is the most used form element.
+        </p>
+
+        <p>
+          The input element can include the <code>name</code> attribute. This is
+          useful for traditional form submissions, as it determines the name of
+          what data is being submitted.
+        </p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="input-example"></code></pre>
+          <div id="input-example">
+            <input type="text" />
+            <input type="radio" />
+            <input type="checkbox" />
+            <input type="submit" />
+            <input type="button" value="Button" />
+          </div>
+        </div>
+
+        <p class="note">
+          Note that the submit type creates a button with the value "Submit"
+          already in it.
+        </p>
+
+        <hr />
+
+        <h2>&lt;label&gt;</h2>
+
+        <p>Labels allow us to better describe an input or form</p>
+
+        <p>
+          For toggleable forms, clicking the label will also toggle the input.
+        </p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="label-example"></code></pre>
+          <div id="label-example">
+            <input id="radio1" type="radio" />
+            <label for="radio1">Label for this form!</label>
+          </div>
+        </div>
+
+        <hr />
+
+        <h2>&lt;select&gt;</h2>
+
+        <p><code>&lt;select&gt;</code> defines a drop-down list</p>
+
+        <p>
+          We use the <code>&lt;option&gt;</code> element to define an option
+          that can be selected
+        </p>
+
+        <p>
+          By default, the first option is selected, but alternatively we can
+          define a pre-selected option by using the
+          <code>selected</code> attribute.
+        </p>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="select-example"></code></pre>
+          <div id="select-example">
+            <select>
+              <option>Option 1</option>
+              <option selected>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="note">
+          NOTE: The <code>selected</code> attribute is a boolean attribute, and
+          we apply it directly to the option we would like to have pre-selected.
+        </p>
+
+        <hr />
+
+        <h2>Form Submission</h2>
+
+        <p>
+          Form submission is quite complex. Firstly, we have the built-in HTML
+          form submission. However, we also have a JavaScript based approach.
+        </p>
+
+        <h3>Traditional</h3>
+
+        <ol class="bold-ol">
+          <li>
+            <h4>User fills out the form. An example form might look like:</h4>
+          </li>
+          <div class="code-example">
+            <pre><code class="code-snippet" data-source="form-submission-example-1"></code></pre>
+            <div id="form-submission-example-1">
+              <form
+                action="/login"
+                method="post"
+                style="
+                  display: grid;
+                  grid-template-rows: 1fr 1fr 1fr 1fr 4fr;
+                  row-gap: 0.5rem;
+                  width: 30%;
+                  gap: 1rem;
+                ">
+                <label for="username-input-1">Username:</label>
+                <input id="username" name="username" type="text" />
+
+                <label for="password-input-1">Password:</label>
+                <input id="password" name="password" type="text" />
+
+                <button id="submit-button-1" type="submit">Log In</button>
+              </form>
+            </div>
+          </div>
+
+          <li><h4>User submits the form</h4></li>
+
+          <div>
+            <p>
+              The button of type="submit" tells the browser to submit the
+              &lt;form&gt; containing that button.
+            </p>
+            <p>
+              Submission can also occur from pressing <kbd>Enter</kbd> while in
+              a form control.
+            </p>
+            <p>Inside the form element...</p>
+            <ul>
+              <li>
+                The <code>action</code> attribute tells the browser WHERE to
+                send the data.
+              </li>
+              <li>
+                The
+                <code>method</code>
+                attribute tells the browser HOW to send the data.
+              </li>
+            </ul>
+          </div>
+
+          <li><h4>Browser constructs form data as key-value pairs</h4></li>
+
+          <li><h4>Browser constructs an HTTP request</h4></li>
+
+          <p>In this example, the browser makes a POST request</p>
+
+          <li>
+            <h4>
+              The request travels to the server, gets processed via a program
+            </h4>
+          </li>
+
+          <li><h4>The server sends an HTTP response</h4></li>
+
+          <p>
+            For instance, the server might send back a redirect. The browser
+            receives that response, and then makes a request to get that page.
+          </p>
+        </ol>
+
+        <h3>Using JavaScript</h3>
+
+        <ol>
+          WIP WIP WIP
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

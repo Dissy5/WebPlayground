@@ -81,6 +81,13 @@ li {
   line-height: 1.5rem;
 }
 
+form button {
+  width: 70%;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+}
+
 th,
 td {
   border: 1px solid var(--fg-color-lighter);
@@ -164,6 +171,9 @@ button:hover {
   }
   #main-nav ul {
     flex-direction: column;
+  }
+  form {
+    width: auto;
   }
 }
 

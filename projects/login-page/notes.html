@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page Project Notes</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <div id="spacer"></div>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/projects/project-index.html">Projects</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <h1>Project Notes: Login Page</h1>
+
+      <hr />
+
+      <ul>
+        <li>
+          When trying to make the background of the body element have a gradient, it worked fine going left or right.
+          However, for a gradient that goes to top or bottom, I had to make the body min-height property set to 100vh.
+        </li>
+        <li>
+          dvh is a newer unit for Dynamic Viewport Height. It's useful on mobile browsers for when the visible viewport
+          changes from nav bars and whatnot appearing and disappearing.
+        </li>
+        <li>
+          We can use an asterisk selector in CSS and then set the box-sizing property to border-box. Apparently this is
+          a pretty common practice in modern CSS, and makes every element's width and height include its content,
+          padding, and border.
+        </li>
+        <li>
+          I learned that in order to center the login container, I had to modify the parent container to display: flex,
+          and then justify and align it's content/children to be centered.
+        </li>
+        <li>
+          I learned that we can make our CSS mobile-first, then use media queries to modify the CSS for larger screen
+          sizes.
+        </li>
+        <li>
+          I learned that when a container is of display: flex, we use a property called literally just "flex" on its
+          children to control how much space each child takes up. I then discovered that this was actually not the
+          solution I was looking for. Instead, I had to use the height property to control the height of a button.
+          Reason being, the flex property only matters if the flex container actually has leftover space, otherwise
+          setting any flex value on a child will have no effect.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
