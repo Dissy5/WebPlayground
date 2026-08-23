@@ -1,21 +1,74 @@
+:root {
+  /* DARK MODE - DEFAULT */
+  /* Background colors */
+  --bg-color: rgb(43, 43, 43);
+
+  /* Foreground colors */
+  --fg-color: rgb(66, 66, 66);
+  --fg-color-darker: rgb(56, 56, 56);
+  --fg-color-lighter: rgb(107, 107, 107);
+
+  /* Accent colors */
+  --accent-color: rgb(104, 159, 204);
+  --accent-color-darker: rgb(54, 83, 145);
+  --accent-color-lighter: rgb(207, 235, 255);
+
+  /* Text colors */
+  --text-color: rgb(252, 252, 252);
+  --link-color: rgb(168, 235, 255);
+}
+
+:root[data-theme="light"] {
+  /* LIGHT MODE */
+  /* Background colors */
+  --bg-color: rgb(124, 124, 124);
+
+  /* Foreground colors */
+  --fg-color: rgb(211, 211, 211);
+  --fg-color-darker: rgb(187, 187, 187);
+  --fg-color-lighter: rgb(240, 240, 240);
+
+  /* Accent colors */
+  --accent-color: rgb(72, 141, 197);
+  --accent-color-darker: rgb(54, 83, 145);
+  --accent-color-lighter: rgb(110, 184, 236);
+
+  /* Text colors */
+  --text-color: rgb(10, 10, 10);
+  --link-color: rgb(36, 75, 134);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #2b2b2b;
-  color: rgb(252, 252, 252);
-  font-family: Helvetica;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family:
+    Segoe UI,
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
   margin: 0;
-  padding-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 a {
-  color: rgb(168, 235, 255);
+  color: var(--link-color);
 }
 
 hr {
-  border-color: rgb(94, 100, 112);
+  border-color: var(--accent-color);
   margin: 1rem 0rem;
 }
 
@@ -23,24 +76,29 @@ table {
   border-collapse: collapse;
 }
 
+li {
+  margin: 0.5rem 0rem;
+  line-height: 1.5rem;
+}
+
 th,
 td {
-  border: 1px solid rgb(88, 89, 95);
+  border: 1px solid var(--fg-color-lighter);
   padding: 15px;
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgb(26, 31, 37);
+  background-color: var(--fg-color);
 }
 
 tbody tr:nth-child(odd) {
-  background-color: rgb(34, 39, 43);
+  background-color: var(--fg-color-darker);
 }
 
 code {
   font-family: jetbrains-mono, monospace;
-  background-color: rgb(51, 51, 51);
-  color: rgb(174, 241, 247);
+  background-color: var(--fg-color-darker);
+  color: var(--link-color);
   padding: 0 0.25em;
 }
 
@@ -55,7 +113,7 @@ button:hover {
 }
 
 #main-header {
-  background-color: #575757;
+  background-color: var(--fg-color);
   padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
@@ -71,28 +129,32 @@ button:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #a0a0a0;
+  background-color: var(--fg-color-lighter);
+}
+
+#main-nav li {
+  margin: 0;
+  line-height: 1;
 }
 
 #main-nav li a {
   text-align: center;
-  color: rgb(26, 31, 37);
+  color: var(--text-color);
   text-decoration: none;
   display: block;
   padding: 1rem;
-  border-right: 1px solid rgb(97, 97, 97);
+  border-right: 1px solid var(--fg-color);
   font-weight: 600;
 }
 
 #main-nav li a:hover {
-  background-color: #747474;
-  color: rgb(252, 252, 252);
+  background-color: var(--fg-color-darker);
 }
 
 #content {
   width: 60%;
   margin-inline: auto;
-  background-color: #424242;
+  background-color: var(--fg-color);
   padding: 1rem;
 }
 
@@ -116,15 +178,20 @@ button:hover {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(50, 139, 212);
+  background-color: var(--accent-color);
   padding: 1rem;
   border-radius: 0.5rem;
-  color: rgb(252, 252, 252);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 #return-to-top:hover {
-  background-color: rgb(43, 111, 161);
+  background-color: var(--accent-color-darker);
+}
+
+#spacer {
+  height: 0.5rem;
+  background-color: var(--accent-color);
 }
 
 .ref-table {
@@ -133,7 +200,7 @@ button:hover {
 }
 
 .code-example {
-  background-color: rgb(82, 82, 82);
+  background-color: var(--fg-color-lighter);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -145,13 +212,13 @@ button:hover {
 
 .code-example pre,
 .code-example div {
-  background-color: rgb(48, 50, 53);
+  background-color: var(--fg-color-darker);
   padding: 1rem;
 }
 
 .code-example pre {
   overflow-x: auto;
-  border-left: 0.25rem solid rgb(50, 139, 212);
+  border-left: 0.25rem solid var(--accent-color);
 }
 
 .code-example img {
@@ -159,7 +226,7 @@ button:hover {
 }
 
 .note {
-  background-color: rgb(46, 51, 102);
+  background-color: var(--accent-color-darker);
   padding: 1rem;
 }
 

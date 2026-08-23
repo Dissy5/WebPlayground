@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Style Guide</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <img src="/images/logo-med.png" alt="Web Playground Logo" />
+      <h1>Web Playground</h1>
+    </header>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/lessons/lesson-index.html">Lessons</a>
+        </li>
+        <li>
+          <a href="/references/html/elements.html">Elements Reference</a>
+        </li>
+        <li>
+          <a href="/references/html/attributes.html">Attributes Reference</a>
+        </li>
+        <li>
+          <a href="/unorganized-notes.html">Unorganized Notes</a>
+        </li>
+        <li>
+          <a href="/settings/settings.html">Settings</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div id="lesson-header">
+        <h1>HTML Style Guide</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="lesson-content">
+        <ul>
+          <li>
+            <h2>Always Declare Document Type</h2>
+            <div class="code-example">
+              <pre><code class="code-snippet" data-source="doctype-example">&lt;DOCTYPE html&gt;</code></pre>
+            </div>
+          </li>
+
+          <li>
+            <h2>Always Use Lowercase Element Names</h2>
+          </li>
+
+          <li>
+            <h2>Close ALL HTML Elements</h2>
+            <p>
+              This normally does not include empty elements. However, XML and XHTML do require you to use the closing
+              slash /.
+            </p>
+          </li>
+
+          <li><h2>Always Use Lowercase Attribute Names</h2></li>
+
+          <li><h2>Always Quote Attribute Values</h2></li>
+
+          <li><h2>Always Specify alt, width, and height for Images</h2></li>
+
+          <li><h2>Do NOT Insert Spaces Between Equal Signs</h2></li>
+
+          <li><h2>NEVER Skip the title Element</h2></li>
+
+          <li>
+            <h2>ALWAYS Include the lang Attribute</h2>
+            <p>This goes inside the <code>&lt;html&gt;</code> tag. It assists search engines and browsers.</p>
+          </li>
+
+          <li>
+            <h2>Declare Char Encoding ASAP</h2>
+
+            <div class="code-example">
+              <pre><code class="code-snippet" data-source="doctype-example">&lt;meta charset="UTF-8"&gt;</code></pre>
+            </div>
+          </li>
+
+          <li>
+            <h2>Set the Viewport in All Pages</h2>
+            <div class="code-example">
+              <pre><code class="code-snippet" data-source="doctype-example">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
