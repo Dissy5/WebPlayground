@@ -2,7 +2,7 @@
   --bg-gradient-start: rgb(23, 21, 54);
   --bg-gradient-end: rgb(67, 54, 90);
 
-  --surface-color: rgb(231, 196, 255);
+  --surface-color: rgb(199, 160, 224);
   --surface-color-dark: rgb(132, 101, 190);
   --surface-color-light: rgb(252, 247, 255);
 }
@@ -66,7 +66,7 @@ button:hover {
   font-size: 2.5em;
   font-weight: 1000;
   color: var(--surface-color-light);
-  text-shadow: 2px 2px 4px var(--surface-color-dark);
+  text-shadow: 1px 1px 4px rgb(17, 15, 37);
 }
 
 #login-form {
