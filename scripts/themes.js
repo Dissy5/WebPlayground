@@ -1,9 +1,13 @@
-function setDarkTheme() {
-  document.documentElement.setAttribute("data-theme", "dark");
+const themeSelect = document.getElementById("theme-select");
+
+function setTheme() {
+  const selectedTheme = themeSelect.value;
+  document.documentElement.setAttribute("data-theme", selectedTheme);
+}
+function init() {
+  if (themeSelect) {
+    themeSelect.addEventListener("change", setTheme);
+  }
 }
 
-function setLightTheme() {
-  document.documentElement.setAttribute("data-theme", "light");
-}
-
-export { setDarkTheme, setLightTheme };
+export { init };

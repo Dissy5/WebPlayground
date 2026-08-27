@@ -119,14 +119,14 @@ button:hover {
   background-color: rgb(201, 201, 201);
 }
 
-#main-header {
+#page-top {
   background-color: var(--fg-color);
   padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
 }
 
-#main-header img {
+#page-top img {
   height: 3rem;
   margin-right: 1rem;
 }
@@ -199,7 +199,7 @@ button:hover {
   background-color: var(--accent-color-darker);
 }
 
-#spacer {
+#header-spacer {
   height: 0.5rem;
   background-color: var(--accent-color);
 }

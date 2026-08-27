@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="default">
+<html lang="en">
   <head>
-    <title>Web Playground</title>
-    <link rel="stylesheet" href="styles/theme.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Backend Basics</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script src="/scripts/code-snippets.js" defer></script>
+    <script type="module" src="/scripts/main.js" defer></script>
   </head>
   <body>
     <header id="main-header">
@@ -34,25 +36,32 @@
           <li>
             <a href="/unorganized-notes.html">Unorganized Notes</a>
           </li>
-          <li>
-            <a href="/profile/settings.html">Settings</a>
-          </li>
         </ul>
       </nav>
     </header>
-
     <div id="content">
-      <h1>Introduction to Web Development</h1>
+      <div id="lesson-header">
+        <h1>Backend Basics</h1>
+        <div id="lesson-nav-button-container">
+          <button>Previous Lesson</button>
+          <button>Next Lesson</button>
+        </div>
+      </div>
 
-      <p>This website is a notebook for my web development journey.</p>
-      <p>
-        Here I will take notes on web development concepts and technologies.
-      </p>
-      <p>
-        I will provide examples and code snippets to help me better understand
-        the topics.
-      </p>
-      <p>I will exercise concepts by applying them directly in this website.</p>
+      <hr />
+
+      <div id="lesson-content">
+        <h2>Communicating With a Server</h2>
+
+        <p>
+          For this first example, I'm running a very basic server on another
+          device using Node as the runtime.
+        </p>
+
+        <button id="js-backend-test-button">Hello?</button>
+
+        <p id="test-server-response"></p>
+      </div>
     </div>
   </body>
 </html>

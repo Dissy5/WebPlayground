@@ -10,33 +10,34 @@
   </head>
   <body>
     <header id="main-header">
-      <img src="/images/logo-med.png" alt="Web Playground Logo" />
-      <h1>Web Playground</h1>
+      <div id="page-top">
+        <img src="/images/logo-med.png" alt="Web Playground Logo" />
+        <h1>Web Playground</h1>
+      </div>
+      <div id="header-spacer"></div>
+      <nav id="main-nav">
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/lessons/lesson-index.html">Lessons</a>
+          </li>
+          <li>
+            <a href="/projects/project-index.html">Projects</a>
+          </li>
+          <li>
+            <a href="/references/html/elements.html">Elements Reference</a>
+          </li>
+          <li>
+            <a href="/references/html/attributes.html">Attributes Reference</a>
+          </li>
+          <li>
+            <a href="/unorganized-notes.html">Unorganized Notes</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <div id="spacer"></div>
-    <nav id="main-nav">
-      <ul>
-        <li>
-          <a href="/index.html">Home</a>
-        </li>
-        <li>
-          <a href="/lessons/lesson-index.html">Lessons</a>
-        </li>
-        <li>
-          <a href="/projects/project-index.html">Projects</a>
-        </li>
-        <li>
-          <a href="/references/html/elements.html">Elements Reference</a>
-        </li>
-        <li>
-          <a href="/references/html/attributes.html">Attributes Reference</a>
-        </li>
-        <li>
-          <a href="/unorganized-notes.html">Unorganized Notes</a>
-        </li>
-      </ul>
-    </nav>
-
     <div id="content">
       <h1>Project Notes: Login Page</h1>
 
@@ -70,6 +71,13 @@
           solution I was looking for. Instead, I had to use the height property to control the height of a button.
           Reason being, the flex property only matters if the flex container actually has leftover space, otherwise
           setting any flex value on a child will have no effect.
+        </li>
+        <li>
+          When we're deciding whether we need to use justify or align for lining something up, think of it this way:
+          Justify is for whatever the main axis is. Align is for the cross axis. So if we're in a flex layout with
+          flex-direction: row, then justify is for the main axis (horizontal), and align is for the cross axis
+          (vertical). If we're in a flex layout with flex-direction: column, then justify is for the cross axis
+          (vertical), and align is for the main axis (horizontal).
         </li>
       </ul>
     </div>
