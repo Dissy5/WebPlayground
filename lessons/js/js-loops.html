@@ -11,10 +11,17 @@
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -33,23 +40,29 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
-      <div id="lesson-header">
+    <main class="main-content">
+      <header class="lesson-header">
         <h1>JavaScript Loops</h1>
-        <div id="lesson-nav-button-container">
-          <button>Previous Lesson</button>
-          <button>Next Lesson</button>
-        </div>
-      </div>
+        <nav class="lesson-nav">
+          <a href="#">Previous Lesson</a>
+          <a href="#">Next Lesson</a>
+        </nav>
+      </header>
 
       <hr />
 
-      <div id="lesson-content">
+      <div class="lesson-content">
         <h2>For Loop</h2>
 
         <div class="code-example">
@@ -62,17 +75,30 @@
           </script>
         </div>
 
-        <p>The for loop is used to execute a block of code a certain number of times.</p>
+        <p>
+          The for loop is used to execute a block of code a certain number of
+          times.
+        </p>
 
         <ul>
-          <li>expression1 is executed (one time) before the execution of the code block.</li>
-          <li>expression2 is executed before each iteration of the code block.</li>
-          <li>expression3 is executed after each iteration of the code block.</li>
+          <li>
+            expression1 is executed (one time) before the execution of the code
+            block.
+          </li>
+          <li>
+            expression2 is executed before each iteration of the code block.
+          </li>
+          <li>
+            expression3 is executed after each iteration of the code block.
+          </li>
         </ul>
 
         <div class="code-example">
           <pre><code class="code-snippet" data-source="for-loop-example2"></code></pre>
-          <img src="/images/down-arrow.png" alt="Down Arrow" id="for-loop-example2-arrow" />
+          <img
+            src="/images/down-arrow.png"
+            alt="Down Arrow"
+            id="for-loop-example2-arrow" />
           <div id="for-loop-example2">
             <script>
               let outputString = "";
@@ -89,14 +115,16 @@
         <h3>Additional Notes</h3>
         <ul>
           <li>
-            Technically, all 3 expressions in the for loop are optional. However, if you omit expression2, you must
-            include a break statement inside the code block to avoid creating an infinite loop.
+            Technically, all 3 expressions in the for loop are optional.
+            However, if you omit expression2, you must include a break statement
+            inside the code block to avoid creating an infinite loop.
           </li>
 
           <li>
-            JavaScript does not have a foreach loop. However, it does have a function forEach that can be used to
-            iterate over arrays. The forEach function takes a callback function as an argument, which is executed for
-            each element in the array.
+            JavaScript does not have a foreach loop. However, it does have a
+            function forEach that can be used to iterate over arrays. The
+            forEach function takes a callback function as an argument, which is
+            executed for each element in the array.
           </li>
         </ul>
 
@@ -114,6 +142,6 @@
           </script>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

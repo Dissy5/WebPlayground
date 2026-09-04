@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="/styles/theme.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <script src="/scripts/code-snippets.js" defer></script>
+    <script type="module" src="/scripts/main.js"></script>
   </head>
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -33,19 +41,27 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
+    <main class="main-content">
       <div id="element-reference-header">
         <h1>&lt;a&gt;</h1>
       </div>
       <hr />
       <div id="element-reference-content">
         <h2>Description</h2>
-        <p>Defines a hyperlink, which is used to link from one page to another.</p>
+        <p>
+          Defines a hyperlink, which is used to link from one page to another.
+        </p>
 
         <h2>Example</h2>
 
@@ -56,6 +72,15 @@
             <a href="https://www.example.com">Example Link</a>
           </div>
         </div>
+
+        <h2>Tips</h2>
+
+        <ul>
+          <li>
+            Without specifying a target attribute, the link will open in the
+            same tab.
+          </li>
+        </ul>
 
         <hr />
 
@@ -92,19 +117,28 @@
             </tr>
             <tr>
               <td>target</td>
-              <td>Specifies where to open the linked document.</td>
+              <td>
+                Specifies where to open the linked document. Can be _blank,
+                _parent, _self, or _top
+              </td>
             </tr>
             <tr>
               <td>download</td>
-              <td>Specifies that the linked document should be downloaded instead of displayed in the browser.</td>
+              <td>
+                Specifies that the linked document should be downloaded instead
+                of displayed in the browser.
+              </td>
             </tr>
             <tr>
               <td>rel</td>
-              <td>Specifies the relationship between the current document and the linked document.</td>
+              <td>
+                Specifies the relationship between the current document and the
+                linked document.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
+    </main>
   </body>
 </html>

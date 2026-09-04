@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure and Semantics</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+    <script type="module" src="/scripts/main.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div id="page-top">
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
+</div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
+<nav id="main-nav">
+  <ul>
+    <li>
+      <a href="/index.html">Home</a>
+    </li>
+    <li>
+      <a href="/lessons/lesson-index.html">Lessons</a>
+    </li>
+    <li>
+      <a href="/projects/project-index.html">Projects</a>
+    </li>
+    <li>
+      <a href="/references/html/elements.html">Elements Reference</a>
+    </li>
+    <li>
+      <a href="/references/html/attributes.html">Attributes Reference</a>
+    </li>
+    <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
+      <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
+    </li>
+  </ul>
+</nav>
+    </header>
+    <main class="main-content">
+      <header class="lesson-header">
+        <h1>Structure and Semantics</h1>
+        <nav class="lesson-nav">
+          <a href="#">Previous Lesson</a>
+          <a href="#">Next Lesson</a>
+        </nav>
+      </header>
+
+      <hr />
+
+      <div class="lesson-content">
+        <h2>Revisiting HTML Structure</h2>
+        <p>
+          Up until now, we've largely relied on
+          <code>&lt;div&gt;</code> elements to provide structure and
+          organization to our pages. While we have used some elements like
+          <code>&lt;header&gt;</code>, it is now time for us to begin more
+          properly structuring our pages.
+        </p>
+        <p>
+          Let's begin with a basic set of elements that I've not used much if at
+          all up to this point:
+        </p>
+        <ul>
+          <li>
+            <code>&lt;main&gt;</code>
+            <p>
+              Main section of the html document. Shouldn't contain repeated
+              elements from multiple pages.
+            </p>
+          </li>
+          <li>
+            <code>&lt;span&gt;</code>
+            <p>
+              An inline container of sorts, usually used to target a portion of
+              a larger piece of content for styling or scripting. Think of it as
+              going hand in hand with div. Div is our block container, while
+              span is our inline container.
+            </p>
+          </li>
+          <li>
+            <code>&lt;section&gt;</code>
+            <p>
+              A grouping of content, usually thematic and identified by a
+              heading. Keep in mind that if the grouping only exists for layout
+              or styling, go with div instead.
+            </p>
+          </li>
+          <li>
+            <code>&lt;article&gt;</code>
+            <p>
+              Article is meant to contain a piece of content that can stand on
+              its own independently from the rest of the page. We can ask
+              ourselves, if we removed this piece and showed it somewhere else,
+              would it still make sense as a complete piece of content? If the
+              answer is yes, use the article element.
+            </p>
+          </li>
+          <li>
+            <code>&lt;aside&gt;</code>
+            A piece of content that is related to the main content but more
+            supplementary than required. Pretty much in-line with the definition
+            of aside.
+          </li>
+          <li>
+            <code>&lt;figure&gt; and &lt;figcaption&gt;</code>
+            <p>
+              A figure is a distinct unit of content that is referenced from or
+              supports surrounding discussion. For example, in our lessons we
+              include code examples. They are great examples of content that
+              could be wrapped in figure elements. Note that a figcaption is not
+              mandatory, but for many figures a caption may be beneficial to
+              have.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

@@ -11,10 +11,17 @@
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -33,26 +40,29 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
-      <div id="lesson-header">
+    <main class="main-content">
+      <header class="lesson-header">
         <h1>HTML Lists</h1>
-        <div id="lesson-nav-button-container">
-          <button>Previous Lesson</button>
-          <button>Next Lesson</button>
-        </div>
-      </div>
+        <nav class="lesson-nav">
+          <a href="#">Previous Lesson</a>
+          <a href="#">Next Lesson</a>
+        </nav>
+      </header>
 
       <hr />
 
-      <p>
-        In HTML, lists are used to group related items together. There are three
-        main types of lists:
-      </p>
+      <p>In HTML, lists are used to group related items together. There are three main types of lists:</p>
       <ul>
         <li>Ordered Lists</li>
         <li>Unordered Lists</li>
@@ -63,8 +73,7 @@
 
       <h2>Ordered Lists</h2>
       <p>
-        An ordered list is a list of items that are numbered. Each item in the
-        list is preceded by a number or letter.
+        An ordered list is a list of items that are numbered. Each item in the list is preceded by a number or letter.
       </p>
 
       <div class="code-example">
@@ -85,8 +94,7 @@
 
       <h2>Unordered Lists</h2>
       <p>
-        An unordered list is a list of items that are bulleted. Each item in the
-        list is preceded by a bullet point.
+        An unordered list is a list of items that are bulleted. Each item in the list is preceded by a bullet point.
       </p>
 
       <div class="code-example">
@@ -138,10 +146,7 @@
       <hr />
 
       <h2>Description Lists</h2>
-      <p>
-        A description list is a list of terms and their descriptions. Each term
-        is followed by a description.
-      </p>
+      <p>A description list is a list of terms and their descriptions. Each term is followed by a description.</p>
 
       <div class="code-example">
         <pre><code class="code-snippet" data-source="description-list-example"></code></pre>
@@ -203,6 +208,11 @@
           </ul>
         </div>
       </div>
-    </div>
+
+      <p class="note">
+        NOTE: This works because by default, flex items are displayed inline. If we instead desired a vertical direction
+        for the flex layout, we can use the flex-direction property to set it to column.
+      </p>
+    </main>
   </body>
 </html>

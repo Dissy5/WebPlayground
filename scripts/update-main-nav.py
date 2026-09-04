@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-root = Path(r"d:\Cursor\Learning\HTMLCSSJS\WebPlayground")
+root = Path(r"d:\Cursor\Learning\HTMLCSSJS\SamWorks")
 nav_inner = (root / "boilerplates" / "main-nav.html").read_text(encoding="utf-8").strip()
 
 pattern = re.compile(

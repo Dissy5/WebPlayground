@@ -6,14 +6,22 @@
     <title>Projects</title>
     <link rel="stylesheet" href="../../styles/theme.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script type="module" src="/scripts/main.js"></script>
   </head>
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -34,28 +42,62 @@
     <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
     </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
+    </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
-      <h1>Projects</h1>
+    <main id="content">
+      <section>
+        <h1>Projects</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Link</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Login Page</td>
-            <td><a href="/projects/login-page/index.html">Login Page</a></td>
-            <td><a href="/projects/login-page/notes.html">Notes</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Link</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Login Page</td>
+              <td><a href="/projects/login-page/index.html">Login Page</a></td>
+              <td><a href="/projects/login-page/notes.html">Notes</a></td>
+            </tr>
+            <tr>
+              <td>In-Browser IDE</td>
+              <td><a href="/projects/in-browser-ide/index.html">IDE</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1>Project Ideas</h1>
+        <ul>
+          <li>In-browser html editor with live viewer</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>AI Assisted Learning</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Test</td>
+              <td><a href="/ai-projects/test/index.html">test page</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
   </body>
 </html>

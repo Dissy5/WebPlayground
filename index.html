@@ -1,19 +1,27 @@
 <!doctype html>
 <html lang="en" data-theme="default">
   <head>
-    <title>Web Playground</title>
+    <title>SamWorks</title>
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/scripts/code-snippets.js" defer></script>
+    <script type="module" src="/scripts/main.js"></script>
   </head>
   <body>
     <header id="main-header">
       <div id="page-top">
-        <img src="/images/logo-med.png" alt="Web Playground Logo" />
-        <h1>Web Playground</h1>
+        <img src="/images/logo-med.png" alt="SamWorks Logo" />
+        <span class="site-name">SamWorks</span>
       </div>
-      <div id="header-spacer"></div>
+      <div class="header-spacer"></div>
+      <div id="nav-menu">
+        <a href="#">
+          Menu
+          <i id="up-caret">▲</i>
+          <i id="down-caret" class="active">▼</i>
+        </a>
+      </div>
       <nav id="main-nav">
         <ul>
           <li>
@@ -32,6 +40,9 @@
             <a href="/references/html/attributes.html">Attributes Reference</a>
           </li>
           <li>
+            <a href="/useful-links.html">Useful Links</a>
+          </li>
+          <li>
             <a href="/unorganized-notes.html">Unorganized Notes</a>
           </li>
           <li>
@@ -41,7 +52,7 @@
       </nav>
     </header>
 
-    <div id="content">
+    <main class="main-content">
       <h1>Introduction to Web Development</h1>
 
       <p>This website is a notebook for my web development journey.</p>
@@ -53,6 +64,6 @@
         the topics.
       </p>
       <p>I will exercise concepts by applying them directly in this website.</p>
-    </div>
+    </main>
   </body>
 </html>

@@ -6,14 +6,23 @@
     <title>&lt;main&gt;</title>
     <link rel="stylesheet" href="/styles/theme.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <script src="/scripts/code-snippets.js" defer></script>
+    <script type="module" src="/scripts/main.js"></script>
   </head>
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -32,19 +41,70 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
+    <main class="main-content">
       <div id="element-reference-header">
         <h1>&lt;main&gt;</h1>
       </div>
       <hr />
       <div id="element-reference-content">
+        <h2>Description</h2>
 
+        <p>Specifies the main part of a document.</p>
+
+        <p>
+          There should not be any major boilerplate included in a document's
+          main section, such as nav bars, side bars, etc.
+        </p>
+
+        <p>Default CSS Display: block</p>
+
+        <h2>Example</h2>
+
+        <div class="code-example">
+          <pre><code class="code-snippet" data-source="element-example"></code></pre>
+          <img src="/images/down-arrow.png" />
+          <div id="element-example">
+            <main>
+              <section>
+                <h1>Section 1</h1>
+                <p>Blah blah blah</p>
+              </section>
+              <section>
+                <h1>Section 2</h1>
+                <p>BLAH BLAH BLAH</p>
+              </section>
+            </main>
+          </div>
+        </div>
+
+        <h2>Attributes</h2>
+
+        <table>
+          <tr>
+            <td>Global Attributes</td>
+            <td>
+              <span class="checkmark">✓</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Event Attributes</td>
+            <td>
+              <span class="checkmark">✓</span>
+            </td>
+          </tr>
+        </table>
       </div>
-    </div>
+    </main>
   </body>
 </html>

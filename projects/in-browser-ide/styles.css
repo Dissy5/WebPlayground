@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(168, 168, 168);
+}
+
+#return-to-main-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+}
+
+#main-header {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(168, 168, 168);
+}
+
+main {
+  display: flex;
+  min-height: 80dvh;
+  justify-content: center;
+}
+
+#ide-container {
+  display: flex;
+  gap: 1em;
+  width: 95%;
+}
+
+#editor {
+  background-color: rgb(59, 59, 63);
+  resize: horizontal;
+  max-width: 80dvw;
+  min-width: 40dvw;
+}
+
+#preview {
+  background-color: white;
+  flex: auto;
+}
+
+.site-name {
+  font-size: 2em;
+  font-weight: 600;
+}

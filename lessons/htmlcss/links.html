@@ -11,10 +11,17 @@
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -33,114 +40,200 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
-    <div id="content">
-      <div id="lesson-header">
+    <main class="main-content">
+      <header class="lesson-header">
         <h1>Links</h1>
-        <div id="lesson-nav-button-container">
-          <button>Previous Lesson</button>
-          <button>Next Lesson</button>
-        </div>
-      </div>
+        <nav class="lesson-nav">
+          <a href="#">Previous Lesson</a>
+          <a href="#">Next Lesson</a>
+        </nav>
+      </header>
 
       <hr />
 
-      <h2 id="section1">Hyperlinks</h2>
-      <p>The &lt;a&gt; tag defines a hyperlink. Using the href attribute we can assign the link's destination</p>
-      <a href="https://example.com">Example Link</a>
+      <section>
+        <h2 id="section1">Hyperlinks</h2>
+        <p>
+          The &lt;a&gt; tag defines a hyperlink. Using the href attribute we can
+          assign the link's destination
+        </p>
+        <a href="https://example.com">Example Link</a>
+      </section>
 
       <hr />
 
-      <h2>Target Attribute</h2>
-      <p>The title attribute determines where the link is opened</p>
-      <p>Target value can be:</p>
-      <ul>
-        <li>
-          _self - Opens in same window/tab
+      <section>
+        <h2>Target Attribute</h2>
+        <p>The title attribute determines where the link is opened</p>
+        <p>Target value can be:</p>
+        <ul>
+          <li>
+            _self - Opens in same window/tab
+            <br />
+            <a href="https://example.com" target="_self">Example</a>
+          </li>
+          <li>
+            _blank - Opens in new window or tab
+            <br />
+            <a href="https://example.com" target="_blank">Example</a>
+          </li>
+          <li>
+            _parent - Opens in the parent frame
+            <br />
+            <a href="https://example.com" target="_parent">Example</a>
+          </li>
+          <li>
+            _top - Opens in the full body of the window
+            <br />
+            <a href="https://example.com" target="_top">Example</a>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Link States / Pseudoclasses</h2>
+        <ul>
+          <li>
+            <code>:link</code>
+            <p>
+              Default state. Not been visited, or clicked or interacted with
+              yet.
+            </p>
+          </li>
+          <li>
+            <code>:visited</code>
+            <p>Link has already been visited</p>
+          </li>
+          <li>
+            <code>:hover</code>
+            <p>Mouse cursor is hovering over link</p>
+          </li>
+          <li>
+            <code>:focus</code>
+            <p>
+              Link is focused. Like as in if we pressed tab to select the
+              element.
+            </p>
+          </li>
+          <li>
+            <code>:active</code>
+            <p>State while being activated, aka while left mouse being held</p>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Absolute vs. Relative URLs</h2>
+        <h3>Absolute</h3>
+        <p>Contains the full web address. Example: https://www.example.com</p>
+        <h3>Relative</h3>
+        <p>
+          Contains a LOCAL link - Same website. Example:
+          /lessons/html/links.html
+        </p>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Image as a Link</h2>
+        <p>To use an image, put the img element inside the anchor element.</p>
+        <a href="https://example.com"><img src="/images/pepehands.png" /></a>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Link to Email</h2>
+        <p>
+          Within the href attribute, we can use "mailto:" to make the link open
+          the user's email program to send a new email
+        </p>
+        <p>
+          Example: &lt;a href="mailto:someone@example.com"&gt;Send
+          Email&lt;/a&gt;
           <br />
-          <a href="https://example.com" target="_self">Example</a>
-        </li>
-        <li>
-          _blank - Opens in new window or tab
-          <br />
-          <a href="https://example.com" target="_blank">Example</a>
-        </li>
-        <li>
-          _parent - Opens in the parent frame
-          <br />
-          <a href="https://example.com" target="_parent">Example</a>
-        </li>
-        <li>
-          _top - Opens in the full body of the window
-          <br />
-          <a href="https://example.com" target="_top">Example</a>
-        </li>
-      </ul>
+          => <a href="mailto:someone@example.com">Send Email</a>
+        </p>
+      </section>
 
       <hr />
 
-      <h2>Absolute vs. Relative URLs</h2>
-      <h3>Absolute</h3>
-      <p>Contains the full web address. Example: https://www.example.com</p>
-      <h3>Relative</h3>
-      <p>Contains a LOCAL link - Same website. Example: /lessons/html/links.html</p>
+      <section>
+        <h2>Button as a Link</h2>
+        <p>
+          Buttons are a bit different. We have to use Javascript to make a
+          button redirect on click.
+        </p>
+        <p>We do this using the onclick attribute.</p>
+        <p>
+          Example: &lt;button
+          onclick="document.location='https://example.com'"&gt;Button
+          Link&lt;/button&gt;
+        </p>
+        <button onclick="document.location = 'https://example.com'">
+          Button Link
+        </button>
+      </section>
 
       <hr />
 
-      <h2>Image as a Link</h2>
-      <p>To use an image, put the img element inside the anchor element.</p>
-      <a href="https://example.com"><img src="/images/pepehands.png" /></a>
+      <section>
+        <h2>Link to Download a File</h2>
+        <p>
+          We can use the download attribute to specify the filename of the file
+          to be downloaded.
+        </p>
+        <p>
+          Example: &lt;a href="file.pdf" download="file.pdf"&gt;Download
+          File&lt;/a&gt;
+        </p>
+        <a href="/images/pepehands.png" download>Download File</a>
+
+        <p class="note">
+          Note: The download attribute is a boolean attribute. It does not need
+          a value.
+        </p>
+      </section>
 
       <hr />
 
-      <h2>Link to Email</h2>
-      <p>
-        Within the href attribute, we can use "mailto:" to make the link open the user's email program to send a new
-        email
-      </p>
-      <p>
-        Example: &lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
-        <br />
-        => <a href="mailto:someone@example.com">Send Email</a>
-      </p>
+      <section>
+        <h2>Link to a Specific Part of the Same Page</h2>
+        <p>
+          We can use the href attribute to link to a specific part of the same
+          page.
+        </p>
+        <p>
+          The way we link to a specific part of the same page is by using the id
+          attribute of the element we want to link to.
+        </p>
+        <p>Example: &lt;a href="#section1"&gt;Section 1&lt;/a&gt;</p>
+        <a href="#section1">Link to Section 1</a>
 
-      <hr />
-
-      <h2>Button as a Link</h2>
-      <p>Buttons are a bit different. We have to use Javascript to make a button redirect on click.</p>
-      <p>We do this using the onclick attribute.</p>
-      <p>Example: &lt;button onclick="document.location='https://example.com'"&gt;Button Link&lt;/button&gt;</p>
-      <button onclick="document.location = 'https://example.com'">Button Link</button>
-
-      <hr />
-
-      <h2>Link to Download a File</h2>
-      <p>We can use the download attribute to specify the filename of the file to be downloaded.</p>
-      <p>Example: &lt;a href="file.pdf" download="file.pdf"&gt;Download File&lt;/a&gt;</p>
-      <a href="/images/pepehands.png" download>Download File</a>
-
-      <p class="note">Note: The download attribute is a boolean attribute. It does not need a value.</p>
-
-      <hr />
-
-      <h2>Link to a Specific Part of the Same Page</h2>
-      <p>We can use the href attribute to link to a specific part of the same page.</p>
-      <p>
-        The way we link to a specific part of the same page is by using the id attribute of the element we want to link
-        to.
-      </p>
-      <p>Example: &lt;a href="#section1"&gt;Section 1&lt;/a&gt;</p>
-      <a href="#section1">Link to Section 1</a>
-
-      <p class="note">
-        Note: One cool thing we can do is use CSS to make this redirect happen smoothly. In CSS, we can use the selector
-        <code>html</code> to target the HTML element and use the <code>scroll-behavior</code> property to make the
-        scroll happen smoothly.
-      </p>
-    </div>
+        <p class="note">
+          Note: One cool thing we can do is use CSS to make this redirect happen
+          smoothly. In CSS, we can use the selector
+          <code>html</code> to target the HTML element and use the
+          <code>scroll-behavior</code> property to make the scroll happen
+          smoothly.
+        </p>
+      </section>
+    </main>
   </body>
 </html>

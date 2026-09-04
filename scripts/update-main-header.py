@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-root = Path(r"d:\Cursor\Learning\HTMLCSSJS\WebPlayground")
+root = Path(r"d:\Cursor\Learning\HTMLCSSJS\SamWorks")
 header_inner = (root / "boilerplates" / "main-header.html").read_text(encoding="utf-8").strip()
 
 pattern = re.compile(
@@ -9,7 +9,13 @@ pattern = re.compile(
     re.DOTALL,  # let . match newlines
 )
 
+def skip(path: Path) -> bool:
+    return "projects" in path.parts
+
 for html_file in root.rglob("*.html"):
+    if skip(html_file):
+            continue
+        
     if "boilerplates" in html_file.parts:
         continue
 

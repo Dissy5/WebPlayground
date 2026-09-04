@@ -11,10 +11,17 @@
   <body>
     <header id="main-header">
       <div id="page-top">
-  <img src="/images/logo-med.png" alt="Web Playground Logo" />
-  <h1>Web Playground</h1>
+  <img src="/images/logo-med.png" alt="SamWorks Logo" />
+  <span class="site-name">SamWorks</span>
 </div>
-<div id="header-spacer"></div>
+<div class="header-spacer"></div>
+<div id="nav-menu">
+  <a href="#">
+    Menu
+    <i id="up-caret">▲</i>
+    <i id="down-caret" class="active">▼</i>
+  </a>
+</div>
 <nav id="main-nav">
   <ul>
     <li>
@@ -33,14 +40,28 @@
       <a href="/references/html/attributes.html">Attributes Reference</a>
     </li>
     <li>
+      <a href="/useful-links.html">Useful Links</a>
+    </li>
+    <li>
       <a href="/unorganized-notes.html">Unorganized Notes</a>
+    </li>
+    <li>
+      <a href="/profile/settings.html">Settings</a>
     </li>
   </ul>
 </nav>
     </header>
 
-    <div id="content">
-      <h2>Basics</h2>
+    <main class="main-content">
+      <header class="lesson-header">
+        <h1>Basics</h1>
+        <nav class="lesson-nav">
+          <a href="#">Previous Lesson</a>
+          <a href="#">Next Lesson</a>
+        </nav>
+      </header>
+
+      <hr />
 
       <h3>Simple HTML Document</h3>
 
@@ -68,13 +89,13 @@
       </code></pre>
       </div>
 
-      <h3>Escape Characters</h3>
+      <h3>Escape Characters / Entities</h3>
       <p>Escape characters are used to represent special characters in HTML.</p>
       <p>
         The less than symbol <code>&lt;</code> is represented as &amp;lt; and
         the greater than symbol <code>&gt;</code> is represented as &amp;gt;.
       </p>
       <p>We can escape the ampersand symbol (&) as &amp;amp;.</p>
-    </div>
+    </main>
   </body>
 </html>
